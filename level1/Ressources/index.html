@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Level1</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand" href="#">Level1</a>
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+        		<a class="nav-link" href="../../manuel.html">retour</a>
+      		</li>
+		</ul>
+	</nav>
+	<div align="center">
+		<h1 class="mt-4">Level1</h1>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 1 : </h5>
+			<p class="lead">aller a la racine du home de l'utilisateur</p>
+			<img src="img/etape1.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 2 : </h5>
+			<p class="lead">lancer gdb</p>
+			<p class="lead">commande : gdb</p>
+			<img src="img/etape2.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 3 : </h5>
+			<p class="lead">regarder comment fonctionne le programme</p>
+			<img src="img/etape3.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 4 : </h5>
+			<p class="lead">on peut voir que le3 programme segfault a partir de 76 caracteres</p>
+			<p class="lead">a 75 carateres il nous parle d'illegale instructions ce qui veut dire quil y a un retour mauvais</p>
+			<img src="img/etape4.png" class="mt-4 om">
+			<br>
+			<img src="img/etape4.1.png" class="mt-4 om">
+			<br>
+			<img src="img/etape4.2.png" class="mt-4 om">
+			<br>
+			<img src="img/etape4.3.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 5 : </h5>
+			<p class="lead">on recupere l'adresse de la fonction run (qui n'est jamais appelee par le programme)</p>
+			<p class="lead">0x08048444</p>
+			<img src="img/etape5.png" class="mt-4 om">
+			<br>
+			<img src="img/etape5.1.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 6 : </h5>
+			<p class="lead">on transforme l'adresse en little endian et on met 75 carateres avant comme ca l'adresse sera executee</p>
+			<p class="lead">on met un - pour garder la main sur le terminal puis on vas chercher le flag</p>
+			<img src="img/etape6.png" class="mt-4 om">
+			<br>
+			<img src="img/etape6.1.png" class="mt-4 om">
+		</div>
+		<br><br>
+		<h1 class="mt-4">Level1 programme</h1>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 1 : </h5>
+			<img src="img/pr1.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 2 : </h5>
+			<img src="img/pr2.png" class="mt-4 om">
+		</div>
+		</div>
+	</div>
+	<br><br><br>
+</body>
+</html>
