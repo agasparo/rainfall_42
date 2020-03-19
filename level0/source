@@ -1,0 +1,34 @@
+package main
+
+import(
+	"os"
+	"strconv"
+	"fmt"
+	"syscall"
+	"os/exec"
+	"strings"
+)
+
+func main() {
+	
+	args := os.Args
+	input, _ := strconv.Atoi(args[1])
+
+	if input == 423 {
+
+		egid := os.Getgid()
+		euid := os.Geteuid()
+
+		syscall.Setresgid(egid, egid, egid)
+		syscall.Setresuid(euid, euid, euid)
+
+		args[0] = strings.Strdup("bin/sh")
+		args[1] = 0
+
+		cmd := exec.Command("/bin/sh", args[0], args[1])
+		cmd.Run()
+	} else {
+
+		fmt.Println("No !")
+	}
+}
