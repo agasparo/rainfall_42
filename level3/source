@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int p() {
+
+	char *str;
+	void *val
+	
+	fflush(stdin);
+	gets(&str);
+	
+	if (((unsigned int)val & 0xb0000000) == 0xb0000000) {
+		printf("(%p)\n", val);
+		exit (1);
+	}
+
+	puts(str);
+	strdup(str);
+	return (0);
+}
+
+int main() {
+
+	p();
+	return (0);
+}
