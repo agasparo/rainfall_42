@@ -1,27 +1,24 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <unistd.h>
 
-int p() {
+int v() 
+{
+		char *str;
+		int cmp = 0;
 
-	char *str;
-	void *val
-	
-	fflush(stdin);
-	gets(&str);
-	
-	if (((unsigned int)val & 0xb0000000) == 0xb0000000) {
-		printf("(%p)\n", val);
-		exit (1);
-	}
+		fgets(str, 512, stdin);
+		printf(str);
 
-	puts(str);
-	strdup(str);
-	return (0);
+		if (cmp == 64) {
+				fwrite("Wait what?!\n", 1, 12, stdout);
+				system("/bin/sh");
+		}
+		return 0;
 }
 
-int main() {
-
-	p();
+int main(int argc, char ** argv) 
+{
+	v();
 	return (0);
 }

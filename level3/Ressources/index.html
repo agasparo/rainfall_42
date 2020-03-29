@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Level2</title>
+	<title>Level3</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-		<a class="navbar-brand" href="#">Level2</a>
+		<a class="navbar-brand" href="#">Level3</a>
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item">
         		<a class="nav-link" href="../../manuel.html">retour</a>
@@ -15,7 +15,7 @@
 		</ul>
 	</nav>
 	<div align="center">
-		<h1 class="mt-4">Level2</h1>
+		<h1 class="mt-4">Level3</h1>
 
 		<div class="mt-5">
 			<h5 class="mt-4">Etape 1 : </h5>
@@ -24,23 +24,24 @@
 
 		<div class="mt-5">
 			<h5 class="mt-4">Etape 2 : </h5>
-			<p class="lead">le programme segfault a partir de 76 caracteres</p>
+			<p class="lead">on teste le programme< et on peut voir que lon peut faire de l'injection</p>
+			<p class="lead">on cheche l'offset (cest le 4)</p>
 			<img src="img/etape2.png" class="mt-4 om">
+			<br>
+			<img src="img/etape2.1.png" class="mt-4 om">
 		</div>
 
 		<div class="mt-5">
 			<h5 class="mt-4">Etape 3 : </h5>
-			<p class="lead">lancer gdb et disas main on peut voir une fonction p</p>
-			<p class="lead">quand on disas p on peut voir gets et si l'adresse a 0xb le programme quit mais il y a un strdup donc on peut stocker notre code shell</p>
+			<p class="lead">le %4$p affiche l'offset 4 (adresse)</p>
 			<img src="img/etape3.png" class="mt-4 om">
-			<br>
-			<img src="img/etape3.1.png" class="mt-4 om">
 		</div>
 
 		<div class="mt-5">
 			<h5 class="mt-4">Etape 4 : </h5>
-			<p class="lead">on cherche l'adresse de /bin/sh</p>
-			<p class="lead">on peut voir que l'adresse de malloc est statique : 0x804a008 au premier malloc</p>
+			<p class="lead">on utiloise gdb pour voir un peu plus le programme</p>
+			<p class="lead">on peut voir une comparaison dans v</p>
+			<p class="lead">on convertit 0x40 en decimal cela nous donne 64</p>
 			<img src="img/etape4.png" class="mt-4 om">
 			<br>
 			<img src="img/etape4.1.png" class="mt-4 om">
@@ -50,12 +51,9 @@
 
 		<div class="mt-5">
 			<h5 class="mt-4">Etape 5 : </h5>
-			<p class="lead">on creer un fichier avec l'adresse de /bin/sh puis on met 55 caracteres pour monter a 80 (pour l'adresse de retour) puis on met l'adresse de malloc ok</p>
+			<p class="lead">cela nous donne : printf(addr, valeur %4$n)</p>
+			<p class="lead">!! valeur = 60 car 64 - 4 de %4$n</p>
 			<img src="img/etape5.png" class="mt-4 om">
-			<br>
-			<img src="img/etape5.1.png" class="mt-4 om">
-			<br>
-			<img src="img/etape5.2.png" class="mt-4 om">
 		</div>
 
 		<div class="mt-5">
@@ -69,11 +67,12 @@
 
 		<div class="mt-5">
 			<h5 class="mt-4">Etape 1 : </h5>
-			<img src="img/pr1.png" class="mt-4 om">
+			<img src="img/etape4.png" class="mt-4 om">
 		</div>
 
 		<div class="mt-5">
 			<h5 class="mt-4">Etape 2 : </h5>
+			<p class="lead">512 car 0x200</p>
 			<img src="img/pr2.png" class="mt-4 om">
 		</div>
 		</div>
