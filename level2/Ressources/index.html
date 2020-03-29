@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Level2</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand" href="#">Level2</a>
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+        		<a class="nav-link" href="../../manuel.html">retour</a>
+      		</li>
+		</ul>
+	</nav>
+	<div align="center">
+		<h1 class="mt-4">Level2</h1>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 1 : </h5>
+			<p class="lead">aller a la racine du home de l'utilisateur</p>
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 2 : </h5>
+			<p class="lead">le programme segfault a partir de 76 caracteres</p>
+			<img src="img/etape2.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 3 : </h5>
+			<p class="lead">lancer gdb et disas main on peut voir une fonction p</p>
+			<p class="lead">quand on disas p on peut voir gets et si l'adresse a 0xb le programme quit mais il y a un strdup donc on peut stocker notre code shell</p>
+			<img src="img/etape3.png" class="mt-4 om">
+			<br>
+			<img src="img/etape3.1.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 4 : </h5>
+			<p class="lead">on cherche l'adresse de /bin/sh</p>
+			<p class="lead">on peut voir que l'adresse de malloc est statique : 0x804a008 au premier malloc</p>
+			<img src="img/etape4.png" class="mt-4 om">
+			<br>
+			<img src="img/etape4.1.png" class="mt-4 om">
+			<br>
+			<img src="img/etape4.2.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 5 : </h5>
+			<p class="lead">on creer un fichier avec l'adresse de /bin/sh puis on met 55 caracteres pour monter a 80 (pour l'adresse de retour) puis on met l'adresse de malloc ok</p>
+			<img src="img/etape5.png" class="mt-4 om">
+			<br>
+			<img src="img/etape5.1.png" class="mt-4 om">
+			<br>
+			<img src="img/etape5.2.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 6 : </h5>
+			<p class="lead">on execute le programme</p>
+			<p class="lead">on met un - pour garder la main sur le terminal puis on vas chercher le flag</p>
+			<img src="img/etape6.png" class="mt-4 om">
+		</div>
+		<br><br>
+		<h1 class="mt-4">Level1 programme</h1>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 1 : </h5>
+			<img src="img/pr1.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 2 : </h5>
+			<img src="img/pr2.png" class="mt-4 om">
+		</div>
+		</div>
+	</div>
+	<br><br><br>
+</body>
+</html>
