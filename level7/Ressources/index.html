@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Level7</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand" href="#">Level7</a>
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+        		<a class="nav-link" href="../../manuel.html">retour</a>
+      		</li>
+		</ul>
+	</nav>
+	<div align="center">
+		<h1 class="mt-4">Level7</h1>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 1 : </h5>
+			<p class="lead">aller a la racine du home de l'utilisateur et tester le programme</p>
+			<img src="img/etape1.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 2 : </h5>
+			<p class="lead">on utilise gdb et on [eut voir un strcpy qui est vulnerable</p>
+			<p class="lead">on voit une fonction m qui n'est jamais utilisée</p>
+			<img src="img/etape2.png" class="mt-4 om">
+			<br>
+			<img src="img/etape2.1.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 3 : </h5>
+			<p class="lead">on cherche l'adresse de puts</p>
+			<img src="img/etape3.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 4 : </h5>
+			<p class="lead">on fait segfault le strcpy (20 caracteres)</p>
+			<img src="img/etape4.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 5 : </h5>
+			<p class="lead">on execute le programme avec 20 c + addr puts (ce qui a pour consequance d'écrase le dst du strcpy suivant) en second arg la fonction m</p>
+			<img src="img/etape5.png" class="mt-4 om">
+		</div>
+
+		<br><br>
+		<h1 class="mt-4">Level1 programme</h1>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 1 : </h5>
+			<img src="img/etape2.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 2 : </h5>
+			<img src="img/pr2.png" class="mt-4 om">
+		</div>
+		</div>
+	</div>
+	<br><br><br>
+</body>
+</html>
