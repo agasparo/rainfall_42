@@ -8,7 +8,7 @@ int p() {
 	void *val
 	
 	fflush(stdin);
-	gets(&str);
+	gets(str);
 	
 	if (((unsigned int)val & 0xb0000000) == 0xb0000000) {
 		printf("(%p)\n", val);
