@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Level4</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand" href="#">Level4</a>
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+        		<a class="nav-link" href="../../manuel.html">retour</a>
+      		</li>
+		</ul>
+	</nav>
+	<div align="center">
+		<h1 class="mt-4">Level4</h1>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 1 : </h5>
+			<p class="lead">aller a la racine du home de l'utilisateur et tester le programme</p>
+			<p class="lead">on peut faire de l'injection. (on cheche l'offset, c'est le 4)</p>
+			<img src="img/etape1.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 2 : </h5>
+			<p class="lead">on utilise objdump  level5 et o=n peut voir une fonction o puis on utilise gdb</p>
+			<p class="lead">on peux voir un jump dans la fonction exit</p>
+			<img src="img/etape2.png" class="mt-4 om">
+			<br>
+			<img src="img/etape2.1.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 3 : </h5>
+			<p class="lead">on change l'adresse 0x08049838(exit function [jump]) en 0x080484a4 (fonction o)</p>
+			<p class="lead">il faut remplacer 9838 par 84a4</p>
+			<p class="lead">on convertit en decimal</p>
+			<img src="img/etape3.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 4 : </h5>
+			<p class="lead">on creer le fichier :</p>
+			<p class="lead">addresse de la cible + hexa convertit + %4\$hn pour l'offset et hn pour remplacer</p>
+			<img src="img/etape4.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 5 : </h5>
+			<p class="lead">on lance le programme</p>
+			<img src="img/etape5.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 6 : </h5>
+			<p class="lead">on recupere le flag</p>
+			<img src="img/etape6.png" class="mt-4 om">
+		</div>
+
+		<br><br>
+		<h1 class="mt-4">Level1 programme</h1>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 1 : </h5>
+			<img src="img/etape2.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 2 : </h5>
+			<img src="img/pr2.png" class="mt-4 om">
+		</div>
+		</div>
+	</div>
+	<br><br><br>
+</body>
+</html>
