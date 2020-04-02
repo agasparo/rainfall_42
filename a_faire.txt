@@ -1,3 +1,0 @@
-convertir les code c et cpp en go
-faire les bonus
-changer les screens des codes
