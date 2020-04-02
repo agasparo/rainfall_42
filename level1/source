@@ -9,7 +9,7 @@ int run()
 
 int main()
 {
-	char str[75];
+	char str[76];
 
 	gets(str);
 	return (0);
