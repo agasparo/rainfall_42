@@ -21,7 +21,7 @@ class Number
         }
 
     private:
-        char _annotation[100];
+        char _annotation[108];
         int _number;
 };
 
