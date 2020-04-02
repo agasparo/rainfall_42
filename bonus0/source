@@ -1,0 +1,37 @@
+#include <iostream>
+#include <cstring>
+
+class Number
+{
+    public:
+
+        void setAnnotation(char *a) // <_ZN1N13setAnnotationEPc>
+        {
+            memcpy(_annotation, a, strlen(a)); // <memcpy@plt> && <strlen@plt>
+        }
+
+        virtual int operator+(Number &r) // <_ZN1NplERS_>
+        {
+            return (_number + r._number);
+        }
+
+        virtual int operator-(Number &r) // <_ZN1NmiERS_>
+        {
+            return (_number - r._number);
+        }
+
+    private:
+        char _annotation[108];
+        int _number;
+};
+
+int main(int argc, char **argv)
+{
+    if(argc <= 1)
+        exit(1); // <_exit@plt> 
+
+    Number *n1 = new Number(5); // <_ZN1NC2Ei> || $0x5,0x4(%esp)
+    Number *n2 = new Number(6); // <_ZN1NC2Ei> || $0x6,0x4(%esp)
+    n1->setAnnotation(argv[1]); // <_ZN1N13setAnnotationEPc>
+    return (*n1 + *n2);
+}
