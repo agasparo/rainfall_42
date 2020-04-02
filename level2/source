@@ -9,12 +9,10 @@ int p() {
 	
 	fflush(stdin);
 	gets(str);
-	
 	if (((unsigned int)val & 0xb0000000) == 0xb0000000) {
 		printf("(%p)\n", val);
 		exit (1);
 	}
-
 	puts(str);
 	strdup(str);
 	return (0);
