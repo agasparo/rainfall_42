@@ -1,34 +1,24 @@
-package main
+#include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
 
-import(
-	"os"
-	"strconv"
-	"fmt"
-	"syscall"
-	"os/exec"
-	"strings"
-)
+int	main(int argc, char **argv)
+{
+	if (atoi(argv[1]) == 423)
+	{
+		char *args[2];
 
-func main() {
-	
-	args := os.Args
-	input, _ := strconv.Atoi(args[1])
+		args[0] = strdup("/bin/sh");
+		args[1] = 0;
 
-	if input == 423 {
+		setresgid(getegid(), getegid(), getegid());
+		setresuid(geteuid(), geteuid(), geteuid());
 
-		egid := os.Getgid()
-		euid := os.Geteuid()
-
-		syscall.Setresgid(egid, egid, egid)
-		syscall.Setresuid(euid, euid, euid)
-
-		args[0] = strings.Strdup("bin/sh")
-		args[1] = 0
-
-		cmd := exec.Command("/bin/sh", args[0], args[1])
-		cmd.Run()
-	} else {
-
-		fmt.Println("No !")
+		execv("/bin/sh", args);
 	}
+	else {
+		fwrite("No !\n", 1, 5, stderr);
+	}
+	return (0);
 }
