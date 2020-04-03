@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bonus1</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand" href="#">Bonus1</a>
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+        		<a class="nav-link" href="../../manuel.html">retour</a>
+      		</li>
+		</ul>
+	</nav>
+	<div align="center">
+		<h1 class="mt-4">Bonus1</h1>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 1 : </h5>
+			<p class="lead">tester le programme</p>
+			<img src="img/etape1.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 2 : </h5>
+			<p class="lead">lancer gdb</p>
+			<img src="img/etape2.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 3 : </h5>
+			<p class="lead">on fait segfault le programme (memcpy) le programme prend 2 parametres 1 : size of string 2 : string</p>
+			<p class="lead">la size est max = 9 car (atoi) et (0x08048441 <+29>:	cmpl   $0x9,0x3c(%esp)) donc taille max de la string = 9 * 4 = 36 caracteres</p>
+			<p class="lead">4  car : (0x08048453 <+47>:	lea    0x0(,%eax,4),%ecx)</p>
+			<img src="img/etape3.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 4 : </h5>
+			<p class="lead">meme copy utilise un size_t (unsigned int) donc les chiffres negatifs passent</p>
+			<img src="img/etape4.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 5 : </h5>
+			<p class="lead">on met un breakpoint au niveau de memcpy</p>
+			<p class="lead">et on teste avec le uint max negatif on a 0 puis on reduis pour avoir une taille > 0</p>
+			<img src="img/etape5.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 6 : </h5>
+			<p class="lead">on cherche qund segfault notre progamme puis on creer nos args</p>
+			<p class="lead">ici : -1073741810 et 40 caracteres pour la chaine puis addr de la comp (0x574f4c46)</p>
+			<p class="lead">on lance le programme</p>
+			<img src="img/etape6.png" class="mt-4 om">
+		</div>
+
+		<br><br>
+		<h1 class="mt-4">Level1 programme</h1>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 1 : </h5>
+			<img src="img/etape2.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 2 : </h5>
+			<img src="img/pr2.png" class="mt-4 om">
+		</div>
+		</div>
+	</div>
+	<br><br><br>
+</body>
+</html>

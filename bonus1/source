@@ -1,0 +1,16 @@
+int main(int argc,char **argv) {
+  
+    int size;
+    char buff[40];
+
+    if ((size = atoi(argv[1])) < 10)
+    {
+        memcpy(buff, argv[2], size * 4);
+        if (size == 0x574f4c46)
+        {
+            execl("/bin/sh", "sh", 0);
+        }
+        return (0);   
+    }
+    return (0);
+}
