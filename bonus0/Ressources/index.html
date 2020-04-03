@@ -25,29 +25,46 @@
 
 		<div class="mt-5">
 			<h5 class="mt-4">Etape 2 : </h5>
-			<p class="lead">disas _ZN1N13setAnnotationEPc (on peut voir un memcpy)</p>
+			<p class="lead">disas main, p et pp</p>
 			<img src="img/etape2.png" class="mt-4 om">
+			<br>
+			<img src="img/etape2.1.png" class="mt-4 om">
+			<br>
+			<img src="img/etape2.2.png" class="mt-4 om">
 		</div>
 
 		<div class="mt-5">
 			<h5 class="mt-4">Etape 3 : </h5>
-			<p class="lead">on regarde qund le programme segfault (offset 108)</p>
+			<p class="lead">on fait segfault le programme (cat 2 strcpy on regarde lequel segfault [ici cest le 2 et 20 c] )</p>
 			<img src="img/etape3.png" class="mt-4 om">
 		</div>
 
 		<div class="mt-5">
 			<h5 class="mt-4">Etape 4 : </h5>
-			<p class="lead">on sais que malloc stocke toujours a partir de 0x0804a00c</p>
-			<p class="lead">donc l'adresse du code shell sera en 0x0804a00c + 4 = 0x0804a010</p>
+			<p class="lead">export une varible d'env avec du shellcode (car shellcode > segfault c) et run gbd</p>
 			<img src="img/etape4.png" class="mt-4 om">
 		</div>
 
 		<div class="mt-5">
 			<h5 class="mt-4">Etape 5 : </h5>
-			<p class="lead">on creer notre chaine avec : </p>
-			<p class="lead">addr (0x0804a010) (4) + code shell (21) + buffer (83 caracteres) + addr (0x0804a00c) (4)</p>
-			<p class="lead">on lance le programme</p>
+			<p class="lead">regarder l'adresse de notre variable</p>
+			<p class="lead">notre adressse est : 0xbffffc95</p>
 			<img src="img/etape5.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 6 : </h5>
+			<p class="lead">on regarde une plage d'adresse dispo du programme pour stocker la notre</p>
+			<p class="lead">on choisis : 0xbffffcd5</p>
+			<img src="img/etape6.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 7 : </h5>
+			<p class="lead">on creer notre chaine avec : </p>
+			<p class="lead">4095 caracteres pour le premier buffer + '\n' (pour le strchr) + 9 caracteres + addr (0xbffffcd5) + 30 caracteres</p>
+			<p class="lead">on lance le programme</p>
+			<img src="img/etape7.png" class="mt-4 om">
 		</div>
 
 		<br><br>
@@ -55,7 +72,11 @@
 
 		<div class="mt-5">
 			<h5 class="mt-4">Etape 1 : </h5>
-			<img src="img/etape1.png" class="mt-4 om">
+			<img src="img/etape2.png" class="mt-4 om">
+			<br>
+			<img src="img/etape2.1.png" class="mt-4 om">
+			<br>
+			<img src="img/etape2.2.png" class="mt-4 om">
 		</div>
 
 		<div class="mt-5">

@@ -1,37 +1,38 @@
-#include <iostream>
-#include <cstring>
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
 
-class Number
+char *p(char *tmp, char *str)
 {
-    public:
+    char buf[4096];
+    
+    puts(str);
+    read(0, &buf, 4096);
+    *strchr(buf, '\n') = 0;
+    
+    return (strncpy(tmp, buf, 20));
+}
 
-        void setAnnotation(char *a) // <_ZN1N13setAnnotationEPc>
-        {
-            memcpy(_annotation, a, strlen(a)); // <memcpy@plt> && <strlen@plt>
-        }
-
-        virtual int operator+(Number &r) // <_ZN1NplERS_>
-        {
-            return (_number + r._number);
-        }
-
-        virtual int operator-(Number &r) // <_ZN1NmiERS_>
-        {
-            return (_number - r._number);
-        }
-
-    private:
-        char _annotation[108];
-        int _number;
-};
-
-int main(int argc, char **argv)
+char *pp(char *str)
 {
-    if(argc <= 1)
-        exit(1); // <_exit@plt> 
+    char s1[20];
+    char s2[20];
 
-    Number *n1 = new Number(5); // <_ZN1NC2Ei> || $0x5,0x4(%esp)
-    Number *n2 = new Number(6); // <_ZN1NC2Ei> || $0x6,0x4(%esp)
-    n1->setAnnotation(argv[1]); // <_ZN1N13setAnnotationEPc>
-    return (*n1 + *n2);
+    p(s1, " - ");
+    p(s2, " - ");
+
+    strcpy(str, s1);
+    str[strlen(str)] = 32;
+    strcat(str, s2);
+    
+    return (str);
+}
+
+int main()
+{
+    char str[54];
+
+    pp(str);
+    puts(str);
+    return (0);
 }
