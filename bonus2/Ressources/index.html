@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bonus2</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand" href="#">Bonus2</a>
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+        		<a class="nav-link" href="../../manuel.html">retour</a>
+      		</li>
+		</ul>
+	</nav>
+	<div align="center">
+		<h1 class="mt-4">Bonus2</h1>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 1 : </h5>
+			<p class="lead">tester le programme</p>
+			<img src="img/etape1.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 2 : </h5>
+			<p class="lead">lancer gdb</p>
+			<img src="img/etape2.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 3 : </h5>
+			<p class="lead">il y a 2 comparaisons main+155 et main+202 (la valeur comparée vient de la variable d'environnement LANG)</p>
+			<p class="lead">on regarde leur valeur</p>
+			<img src="img/etape3.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 4 : </h5>
+			<p class="lead">on esseye de faire segfault le programme</p>
+			<p class="lead">on peut voir que lorsque lon change de langue on peut totalement ecrire sur la memoire</p>
+			<img src="img/etape4.png" class="mt-4 om">
+			<br>
+			<img src="img/etape4.1.png" class="mt-4 om">
+			<br>
+			<img src="img/etape4.2.png" class="mt-4 om">
+			<br>
+			<img src="img/etape4.3.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 5 : </h5>
+			<p class="lead">on fait un ret2libc</p>
+			<p class="lead"><a href="https://beta.hackndo.com/retour-a-la-libc/">documenation tres utile</a></p>
+			<img src="img/etape5.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 6 : </h5>
+			<p class="lead">on liste les region mapper</p>
+			<img src="img/etape6.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 7 : </h5>
+			<p class="lead">on cherche l'adresse memoire de /bin/sh ou la lib est appelle</p>
+			<img src="img/etape7.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 8 : </h5>
+			<p class="lead">on fait notre fichier</p>
+			<p class="lead">Arg1 : 4 caracteres + addr (/bin/sh) + 42 caracteres</p>
+			<p class="lead">Arg2 : 23 caracteres + addr (system)</p>
+			<img src="img/etape8.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 9 : </h5>
+			<p class="lead">si on lance comme ca on vas segfault donc on change la lang</p>
+			<img src="img/etape9.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 10 : </h5>
+			<p class="lead">on lance la programme</p>
+			<img src="img/etape10.png" class="mt-4 om">
+		</div>
+
+		<br><br>
+		<h1 class="mt-4">Level1 programme</h1>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 1 : </h5>
+			<img src="img/etape2.png" class="mt-4 om">
+		</div>
+
+		<div class="mt-5">
+			<h5 class="mt-4">Etape 2 : </h5>
+			<img src="img/pr2.png" class="mt-4 om">
+		</div>
+		</div>
+	</div>
+	<br><br><br>
+</body>
+</html>
