@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int   main(int argc, char **argv)
+{
+
+  FILE *fd;
+  char data[66];
+  char data1[65];
+
+  memset(data, 0, 33);
+  fd = fopen("/home/user/end/.pass","r");
+  if ((!fd) || (argc != 2))
+    return 0;
+
+  fread(data, 1, 66, fd);
+  data[atoi(argv[1])] = 0;
+
+  fread(data1, 1, 65, fd);
+  fclose(fd);
+
+  if (strcmp(data, argv[1]) == 0)
+    execl("/bin/sh", "sh");
+  else
+    puts(data2);
+
+  return (0);
+}
