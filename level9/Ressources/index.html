@@ -37,9 +37,8 @@
 
 		<div class="mt-5">
 			<h5 class="mt-4">Etape 4 : </h5>
-			<p class="lead">on sais que malloc stocke toujours a partir de 0x0804a00c</p>
-			<p class="lead">donc l'adresse du code shell sera en 0x0804a00c + 4 = 0x0804a010</p>
-			<img src="img/etape4.png" class="mt-4 om">
+			<p class="lead">on recuperer l'adresse du retour du memcpy 0x0804a00c</p>
+			<p class="lead">donc l'adresse du code shell sera en 0x0804a00c + 4 (car 4 bytes = une adresse ) = 0x0804a010</p>
 		</div>
 
 		<div class="mt-5">
